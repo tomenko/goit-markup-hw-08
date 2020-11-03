@@ -1,0 +1,218 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 500ms linear;
+
+  .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 500ms linear 500ms;
+
+    .backdrop-modal {
+      transform: translate(-50%, -50%) scale(0);
+      transition: all 500ms linear 0ms;
+    }
+  }
+}
+
+.backdrop-modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: all 500ms linear 500ms;
+}
+
+.button-backdrop {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.svg-backdrop {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .button-backdrop:hover & {
+    fill: getColor("accent");
+  }
+}
+
+.modal-title {
+  width: 100%;
+  padding-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &-field {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: getColor("modal");
+    &-wrapper {
+      display: block;
+      position: relative;
+      margin-top: 4px;
+    }
+  }
+
+  &-input:focus,
+  &-message:focus {
+    outline: none;
+    border: 1px solid getColor("accent");
+  }
+
+  &-input {
+    display: block;
+    padding-left: 42px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.modal-form-svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal-form-input:focus + & {
+    fill: getColor("accent");
+  }
+}
+
+.user-massage-field {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: getColor("modal");
+}
+
+.modal-form-message {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox {
+  padding: 0 9px;
+  margin-bottom: 30px;
+}
+
+.modal-form-policy {
+  display: inline-block;
+
+  &:checked + .modal-form-policy-label::before {
+    background-color: getColor("accent");
+    border: getColor("accent");
+    background-image: url(../images/backdrop/Vector.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &-label {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: getColor("modal");
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      border: 2px solid #212121;
+      border-radius: 2px;
+      margin-right: 8px;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+
+.policy-link {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: getColor("accent");
+}
+
+.modal-form-btn {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0px;
+  background-color: getColor("accent");
+  color: #ffffff;
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background: #188ce8;
+  }
+}

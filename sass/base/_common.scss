@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 2px solid red;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.address {
+  font-style: normal;
+}
+
+.navigation-list-link:hover,
+.navigation-list-link:focus,
+.address-mail:hover,
+.address-mail:focus,
+.address-tel:hover,
+.address-tel:focus,
+.footer-address-map:hover,
+.footer-address-map:focus,
+.footer-address-mail:hover,
+.footer-address-mail:focus,
+.footer-address-tel:hover,
+.footer-address-tel:focus {
+  color: getColor("accent");
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.page-body {
+  font-family: $main-font;
+  font-style: normal;
+  color: getColor("main");
+}
+
+.section-portfolio {
+  padding: 94px 0px;
+}

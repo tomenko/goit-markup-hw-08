@@ -1,0 +1,65 @@
+.section-advantages {
+  padding: 94px 0;
+}
+
+.advantages-list {
+  display: flex;
+
+  &-item {
+    width: 270px;
+
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      background-color: #f5f4fa;
+      border-radius: 4px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+}
+
+.advantages-list-item:nth-child(1) div::before {
+  background-image: url(../images/section-advantages/antenna.svg);
+}
+
+.advantages-list-item:nth-child(2) div::before {
+  background-image: url(../images/section-advantages/clock.svg);
+}
+
+.advantages-list-item:nth-child(3) div::before {
+  background-image: url(../images/section-advantages/diagram.svg);
+}
+
+.advantages-list-item:nth-child(4) div::before {
+  background-image: url(../images/section-advantages/astronaut.svg);
+}
+
+.advantages-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.advantages-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: getColor("title");
+}
+
+.advantages-subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+}
