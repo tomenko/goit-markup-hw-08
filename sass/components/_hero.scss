@@ -85,9 +85,7 @@
   min-width: 200px;
   height: 50px;
   border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
+  @include font(700, 16px, 30px);
   border-style: none;
   letter-spacing: 0.06em;
   color: #ffffff;

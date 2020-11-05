@@ -326,11 +326,12 @@ img {
 }
 
 .footer-container {
-  display: flex;
+  display: block;
+  text-align: center;
 }
 
 .foter-left {
-  margin-right: 80px;
+  /* margin-right: 80px; */
 }
 
 .logo-web-foother {
@@ -354,9 +355,21 @@ img {
 }
 
 .logo-container {
+  display: block;
+  text-align: center;
   margin-bottom: 20px;
 }
 
+/* 45345 */
+/* .footer-address-list {
+  display: block;
+}
+
+.footer-address-list-item {
+  display: block;
+  margin: 0 auto;
+} */
+/* 63456346 */
 .footer-address-list-item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -385,10 +398,14 @@ img {
 
 .footer-icon {
   display: block;
+  text-align: center;
   width: 206px;
   height: 80px;
-  padding-top: 12px;
-  margin-right: 93px;
+  /* padding-top: 12px; */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  /* margin-right: 93px; */
 }
 
 .footer-title {
@@ -432,6 +449,8 @@ img {
 
 .footer-mailing {
   display: block;
+  text-align: center;
+  /* margin: 0 auto; */
   padding-top: 12px;
 }
 
@@ -446,15 +465,20 @@ img {
 }
 
 .footer-input-mail {
-  display: flex;
+  /* display: flex; */
+  display: block;
+  /* margin: 0 auto; */
 }
 
 .input-mail {
-  display: flex;
-  width: 358px;
+  /* display: flex; */
+  display: block;
+  /* width: 358px; */
+  width: 450px;
   height: 50px;
   align-items: center;
-  margin-right: 12px;
+  /* margin-right: 12px; */
+  margin: 0 auto 20px;
   padding: 0 16px;
   font-weight: 400;
   font-size: 16px;
@@ -469,7 +493,9 @@ img {
 }
 
 .btn-mailing {
-  display: flex;
+  /* display: flex; */
+  display: block;
+  margin: 0 auto;
   width: 200px;
   height: 50px;
   font-weight: 700;

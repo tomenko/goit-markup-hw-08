@@ -1,40 +1,72 @@
 .section-team {
-  padding: 94px 0;
+  padding: 60px 0;
   background-color: #f5f4fa;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 
   &-title {
     margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.167;
+    @include font(700, 28px, 33px);
     text-align: center;
     letter-spacing: 0.03em;
     color: getColor("title");
+
+    @media screen and (min-width: 1200px) {
+      @include font(700, 36px, 42px);
+    }
   }
 }
 
 .team-list {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  /* justify-content: space-between; */
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   &-content {
     padding: 30px 0;
   }
 
   &-item {
-    width: 270px;
+    width: 100%;
     background: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 30px * 3) / 4);
+    }
+  }
+}
+
+.team-list-item:not(:last-child) {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+  }
+}
+
+.team-list-item:nth-last-child(-n + 2) {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
   }
 }
 
 .team-title {
   margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.187;
+  @include font(500, 16px, 19px);
   text-align: center;
   letter-spacing: 0.03em;
   color: getColor("title");
@@ -42,9 +74,7 @@
 
 .team-subtitle {
   margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.187;
+  @include font(400, 16px, 19px);
   text-align: center;
   letter-spacing: 0.03em;
 }

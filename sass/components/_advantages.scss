@@ -79,17 +79,13 @@
 .advantages-title {
   margin-top: 30px;
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
+  @include font(700, 14px, 16px);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: getColor("title");
 }
 
 .advantages-subtitle {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  @include font(400, 14px, 24px);
   letter-spacing: 0.03em;
 }

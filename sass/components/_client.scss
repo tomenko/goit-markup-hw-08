@@ -1,29 +1,55 @@
 .section-client {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 .client-title {
   margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
+  @include font(700, 28px, 33px);
   text-align: center;
   letter-spacing: 0.03em;
   color: getColor("title");
+
+  @media screen and (min-width: 1200px) {
+    @include font(700, 36px, 42px);
+  }
 }
 
 .client-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   &-item {
     display: flex;
-    width: calc((100%-30px * 5) / 6);
+    margin-bottom: 30px;
+    width: calc((100% - 30px) / 2);
     height: 90px;
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px * 2) / 3);
     }
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      margin-bottom: 0px;
+      width: calc((100% - 30px * 5) / 6);
+    }
+  }
+}
+
+.client-list-item:nth-last-child(-n + 2) {
+  @media screen and (min-width: 480px) {
+    margin-bottom: 0px;
+  }
+}
+
+.client-list-item:nth-last-child(-n + 3) {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
   }
 }
 
