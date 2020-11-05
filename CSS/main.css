@@ -330,7 +330,7 @@ img {
   .advantages-list {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+    justify-content: space-between;
   }
 }
 
@@ -341,7 +341,6 @@ img {
 @media screen and (min-width: 768px) {
   .advantages-list-item {
     width: calc((100%-30px * 2) / 2);
-    margin: 0 30px;
   }
 }
 
