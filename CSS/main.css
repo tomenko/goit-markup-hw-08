@@ -322,6 +322,12 @@ img {
   padding: 60px 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .section-advantages {
+    padding: 94px 0;
+  }
+}
+
 .advantages-list {
   display: block;
 }
@@ -340,12 +346,14 @@ img {
 
 @media screen and (min-width: 768px) {
   .advantages-list-item {
-    width: calc((100%-30px) / 2);
+    width: calc((100% - 30px) / 2);
   }
 }
 
-.advantages-list-item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (min-width: 1200px) {
+  .advantages-list-item {
+    width: calc((100% - 30px * 3) / 4);
+  }
 }
 
 .advantages-list-item div {
@@ -382,9 +390,22 @@ img {
   background-image: url(../../images/section-advantages/astronaut.svg);
 }
 
-/* .advantages-list-item:not(:last-child) {
-  margin-right: 30px;
-} */
+.advantages-list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-list-item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-list-item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
 .advantages-title {
   margin-top: 30px;
   margin-bottom: 10px;
