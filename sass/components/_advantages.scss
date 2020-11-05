@@ -1,12 +1,27 @@
 .section-advantages {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .advantages-list {
-  display: flex;
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 
   &-item {
-    width: 270px;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100%-30px * 2) / 2);
+      margin: 0 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
 
     & div {
       display: flex;
@@ -21,30 +36,32 @@
         display: block;
         width: 70px;
         height: 70px;
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
   }
 }
 
 .advantages-list-item:nth-child(1) div::before {
-  background-image: url(../images/section-advantages/antenna.svg);
+  background-image: url(../../images/section-advantages/antenna.svg);
 }
 
 .advantages-list-item:nth-child(2) div::before {
-  background-image: url(../images/section-advantages/clock.svg);
+  background-image: url(../../images/section-advantages/clock.svg);
 }
 
 .advantages-list-item:nth-child(3) div::before {
-  background-image: url(../images/section-advantages/diagram.svg);
+  background-image: url(../../images/section-advantages/diagram.svg);
 }
 
 .advantages-list-item:nth-child(4) div::before {
-  background-image: url(../images/section-advantages/astronaut.svg);
+  background-image: url(../../images/section-advantages/astronaut.svg);
 }
 
-.advantages-list-item:not(:last-child) {
+/* .advantages-list-item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 
 .advantages-title {
   margin-top: 30px;

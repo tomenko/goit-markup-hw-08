@@ -216,10 +216,50 @@ img {
 
 .section-hero {
   background-color: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/section-hero/hero.jpg);
+  /* background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ); */
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .section-hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mobile/section-hero/Hero-x1-mob.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/tablet/section-hero/Hero-x1-tab.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/desktop/section-hero/Hero-x1-des.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 767px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 767px), screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 320px) and (max-width: 767px), screen and (min-resolution: 192dpi) and (min-width: 320px) and (max-width: 767px), screen and (min-resolution: 2dppx) and (min-width: 320px) and (max-width: 767px) {
+  .section-hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mobile/section-hero/Hero-x2-mob.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .section-hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/tablet/section-hero/Hero-x2-tab.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .section-hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/desktop/section-hero/Hero-x2-des.jpg);
+  }
 }
 
 .container-hero {
@@ -227,10 +267,23 @@ img {
    padding: 200px; */
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .container-hero {
     height: 400px;
-    padding: 118px 60px;
+    padding: 118px 45px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-hero {
+    padding: 118px 180px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-hero {
+    height: 600px;
+    padding: 200px 240px;
   }
 }
 
@@ -266,15 +319,34 @@ img {
 }
 
 .section-advantages {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .advantages-list {
-  display: flex;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .advantages-list-item {
-  width: 270px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-list-item {
+    width: calc((100%-30px * 2) / 2);
+    margin: 0 30px;
+  }
+}
+
+.advantages-list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .advantages-list-item div {
@@ -291,28 +363,29 @@ img {
   display: block;
   width: 70px;
   height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .advantages-list-item:nth-child(1) div::before {
-  background-image: url(../images/section-advantages/antenna.svg);
+  background-image: url(../../images/section-advantages/antenna.svg);
 }
 
 .advantages-list-item:nth-child(2) div::before {
-  background-image: url(../images/section-advantages/clock.svg);
+  background-image: url(../../images/section-advantages/clock.svg);
 }
 
 .advantages-list-item:nth-child(3) div::before {
-  background-image: url(../images/section-advantages/diagram.svg);
+  background-image: url(../../images/section-advantages/diagram.svg);
 }
 
 .advantages-list-item:nth-child(4) div::before {
-  background-image: url(../images/section-advantages/astronaut.svg);
+  background-image: url(../../images/section-advantages/astronaut.svg);
 }
 
-.advantages-list-item:not(:last-child) {
+/* .advantages-list-item:not(:last-child) {
   margin-right: 30px;
-}
-
+} */
 .advantages-title {
   margin-top: 30px;
   margin-bottom: 10px;
