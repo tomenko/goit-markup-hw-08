@@ -330,9 +330,12 @@ img {
   text-align: center;
 }
 
-/* .foter-left {
-  margin-right: 80px;
-} */
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+  }
+}
+
 .logo-web-foother {
   font-family: Raleway, sans-serif;
   font-style: normal;
@@ -359,6 +362,12 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .logo-container {
+    text-align: left;
+  }
+}
+
 /* 45345 */
 /* .footer-address-list {
   display: block;
@@ -370,7 +379,13 @@ img {
 } */
 /* 63456346 */
 .footer-address-list-item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-address-list-item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer-address-map {
@@ -399,12 +414,30 @@ img {
   display: block;
   text-align: center;
   width: 206px;
-  height: 80px;
-  /* padding-top: 12px; */
+  /* height: 80px; */
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 0 auto;
-  /* margin-right: 93px; */
+  /*  */
+  /* @media screen and (min-width: 768px) {
+    display: flex;
+  } */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-icon {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 102px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-icon {
+    text-align: left;
+    padding-top: 12px;
+    margin-right: 93px;
+  }
 }
 
 .footer-title {
@@ -453,6 +486,14 @@ img {
   padding-top: 12px;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-mailing {
+    /* display: flex; */
+    text-align: left;
+    margin: 0 auto;
+  }
+}
+
 .title-mailing {
   font-weight: 700;
   font-size: 14px;
@@ -467,6 +508,13 @@ img {
   /* display: flex; */
   display: block;
   /* margin: 0 auto; */
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-input-mail {
+    display: flex;
+    margin: 0 auto;
+  }
 }
 
 .input-mail {
@@ -491,9 +539,16 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 1200px) {
+  .input-mail {
+    display: flex;
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+
 .btn-mailing {
-  /* display: flex; */
-  display: block;
+  display: flex;
   margin: 0 auto;
   width: 200px;
   height: 50px;
@@ -513,5 +568,26 @@ img {
 
 .icon-mailing {
   margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-info {
+    display: flex;
+    padding: 0px 74px 0px 61px;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .foter-left {
+    margin-right: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-info {
+    display: flex;
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */
