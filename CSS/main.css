@@ -900,7 +900,8 @@ img {
   /* display: flex; */
   display: block;
   /* width: 358px; */
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   align-items: center;
   /* margin-right: 12px; */
