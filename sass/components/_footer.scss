@@ -15,21 +15,25 @@
 .logo-web-foother {
   font-family: $logo-font;
   font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.286;
+  @include font(700, 24px, 28px);
   letter-spacing: 0.03em;
   color: #2196f3;
+
+  @media screen and (min-width: 1200px) {
+    @include font(700, 26px, 31px);
+  }
 }
 
 .logo-foother {
   font-family: $logo-font;
   font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.286;
+  @include font(700, 24px, 28px);
   letter-spacing: 0.03em;
   color: #ffffff;
+
+  @media screen and (min-width: 1200px) {
+    @include font(700, 26px, 31px);
+  }
 }
 
 .logo-container {
@@ -42,18 +46,6 @@
   }
 }
 
-/* 45345 */
-/* .footer-address-list {
-  display: block;
-}
-
-.footer-address-list-item {
-  display: block;
-  margin: 0 auto;
-} */
-
-/* 63456346 */
-
 .footer-address-list-item:not(:last-child) {
   margin-bottom: 8px;
 
@@ -65,9 +57,7 @@
 .footer-address-map {
   font-family: $main-font;
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  @include font(400, 14px, 24px);
   letter-spacing: 0.03em;
   color: #ffffff;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,9 +66,7 @@
 .footer-address-mail,
 .footer-address-tel {
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  @include font(400, 14px, 24px);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,10 +94,8 @@
 }
 
 .footer-title {
-  font-weight: 700;
-  font-size: 14px;
+  @include font(700, 14px, 16px);
   margin-bottom: 20px;
-  line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
@@ -148,20 +134,16 @@
 .footer-mailing {
   display: block;
   text-align: center;
-  /* margin: 0 auto; */
   padding-top: 12px;
 
   @media screen and (min-width: 1200px) {
-    /* display: flex; */
     text-align: left;
     margin: 0 auto;
   }
 }
 
 .title-mailing {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
+  @include font(700, 14px, 16px);
   letter-spacing: 0.03em;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -169,9 +151,7 @@
 }
 
 .footer-input-mail {
-  /* display: flex; */
   display: block;
-  /* margin: 0 auto; */
 
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -180,14 +160,11 @@
 }
 
 .input-mail {
-  /* display: flex; */
   display: block;
-  /* width: 358px; */
   width: 100%;
   max-width: 450px;
   height: 50px;
   align-items: center;
-  /* margin-right: 12px; */
   margin: 0 auto 20px;
   padding: 0 16px;
   @include font(400, 16px, 20px);

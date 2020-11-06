@@ -4,8 +4,7 @@
   margin: -15px;
 
   &-item {
-    width: 370px;
-    height: 404px;
+    height: 100%;
     background: #ffffff;
     border: 1px solid #eeeeee;
     box-sizing: border-box;
@@ -16,6 +15,19 @@
       border: 1px solid #eeeeee;
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 370px;
     }
   }
 
@@ -36,9 +48,7 @@
   overflow: hidden;
 
   &-subtitle {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
+    @include font(400, 18px, 28px);
     letter-spacing: 0.03em;
     color: #ffffff;
   }
@@ -58,16 +68,12 @@
 
 .portfolio-title {
   margin-bottom: 4px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
+  @include font(700, 18px, 36px);
   letter-spacing: 0.06em;
   color: #212121;
 }
 
 .portfolio-subtitle {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
+  @include font(400, 16px, 30px);
   letter-spacing: 0.03em;
 }
