@@ -34,3 +34,10 @@ $logo-font: Raleway, sans-serif;
 }
 
 $grsdient-hero: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+
+%picture {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

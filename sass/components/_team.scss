@@ -64,6 +64,18 @@
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  picture > img {
+    @extend: %picture;
+  }
+  /* .team-photo > img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  } */
+}
+
 .team-title {
   margin-bottom: 10px;
   @include font(500, 16px, 19px);
