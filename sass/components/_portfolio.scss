@@ -68,7 +68,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .team-photo > img {
-    @extend: %picture > img;
+    @extend %picture > img;
   }
   /* .team-photo > img {
     display: block;
