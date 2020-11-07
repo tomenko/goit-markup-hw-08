@@ -47,19 +47,19 @@
 }
 
 .advantages-list-item:nth-child(1) div::before {
-  background-image: url(../../images/section-advantages/antenna.svg);
+  background-image: url(.././images/section-advantages/antenna.svg);
 }
 
 .advantages-list-item:nth-child(2) div::before {
-  background-image: url(../../images/section-advantages/clock.svg);
+  background-image: url(.././images/section-advantages/clock.svg);
 }
 
 .advantages-list-item:nth-child(3) div::before {
-  background-image: url(../../images/section-advantages/diagram.svg);
+  background-image: url(.././images/section-advantages/diagram.svg);
 }
 
 .advantages-list-item:nth-child(4) div::before {
-  background-image: url(../../images/section-advantages/astronaut.svg);
+  background-image: url(.././images/section-advantages/astronaut.svg);
 }
 
 .advantages-list-item:not(:last-child) {

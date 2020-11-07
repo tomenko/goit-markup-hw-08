@@ -33,17 +33,17 @@
   .section-hero {
     @media screen and (min-width: 320px) and (max-width: 767px) {
       background-image: $grsdient-hero,
-        url(../../images/mobile/section-hero/Hero-x2-mob.jpg);
+        url(.././images/mobile/section-hero/Hero-x2-mob.jpg);
     }
 
     @media screen and (min-width: 768px) {
       background-image: $grsdient-hero,
-        url(../../images/tablet/section-hero/Hero-x2-tab.jpg);
+        url(.././images/tablet/section-hero/Hero-x2-tab.jpg);
     }
 
     @media screen and (min-width: 1200px) {
       background-image: $grsdient-hero,
-        url(../../images/desktop/section-hero/Hero-x2-des.jpg);
+        url(.././images/desktop/section-hero/Hero-x2-des.jpg);
     }
   }
 }
