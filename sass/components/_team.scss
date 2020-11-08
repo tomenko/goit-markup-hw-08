@@ -65,15 +65,9 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  picture > img {
+  .team-photo > img {
     @extend %picture;
   }
-  /* .team-photo > img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  } */
 }
 
 .team-title {
