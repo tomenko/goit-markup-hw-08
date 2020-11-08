@@ -11,6 +11,12 @@
 /*цвет footer-#2f303a*/
 /*основной текст (main-font) Roboto*/
 /*текст лого (logo-font) Raleway*/
+/* %picture {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} */
 *,
 *::before,
 *::after {
@@ -103,11 +109,9 @@ img {
 }
 
 .header {
-  /* padding: 25px 0; */
   position: relative;
   padding: 16px 0;
-  /* border-bottom: 1px solid #ececec; */
-  border-bottom: 3px solid red;
+  border-bottom: 1px solid #ececec;
   background-color: #ffffff;
   z-index: 999;
 }
@@ -216,7 +220,6 @@ img {
   .navigation-list {
     flex-direction: row;
     padding: 0 84px 0 0;
-    /* margin-right: 84px; */
   }
 }
 
@@ -424,7 +427,7 @@ img {
     display: none;
     position: absolute;
     background-color: white;
-    top: 100%;
+    top: 101%;
     left: 0;
     width: 100%;
   }

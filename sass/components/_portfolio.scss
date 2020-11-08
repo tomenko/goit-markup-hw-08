@@ -45,7 +45,10 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .picture > img {
-    @extend %picture;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 

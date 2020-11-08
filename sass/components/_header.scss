@@ -1,7 +1,9 @@
 .header {
-  /* padding: 25px 0; */
   position: relative;
   padding: 16px 0;
+  border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
+  z-index: 999;
 
   @media screen and (min-width: 768px) {
     padding: 21px 0;
@@ -10,11 +12,6 @@
   @media screen and (min-width: 1200px) {
     padding: 24px 0;
   }
-
-  /* border-bottom: 1px solid #ececec; */
-  border-bottom: 3px solid red;
-  background-color: #ffffff;
-  z-index: 999;
 
   .container {
     display: flex;
@@ -86,7 +83,6 @@
   @media screen and (min-width: 768px) {
     flex-direction: row;
     padding: 0 84px 0 0;
-    /* margin-right: 84px; */
   }
 
   &-link {
@@ -252,7 +248,7 @@
     display: none;
     position: absolute;
     background-color: white;
-    top: 100%;
+    top: 101%;
     left: 0;
     width: 100%;
 
