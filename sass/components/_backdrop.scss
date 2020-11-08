@@ -161,7 +161,7 @@
   &:checked + .modal-form-policy-label::before {
     background-color: getColor("accent");
     border: getColor("accent");
-    background-image: url(../images/backdrop/Vector.svg);
+    background-image: url(.././images/backdrop/Vector.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }

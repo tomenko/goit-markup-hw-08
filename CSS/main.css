@@ -543,6 +543,7 @@ img {
   letter-spacing: 0.06em;
   color: #ffffff;
   background: #2196f3;
+  cursor: pointer;
 }
 
 .section-advantages {
@@ -1366,7 +1367,7 @@ img {
 .modal-form-policy:checked + .modal-form-policy-label::before {
   background-color: #2196f3;
   border: #2196f3;
-  background-image: url(../images/backdrop/Vector.svg);
+  background-image: url(.././images/backdrop/Vector.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
