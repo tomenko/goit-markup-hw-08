@@ -113,7 +113,6 @@ img {
   padding: 16px 0;
   border-bottom: 1px solid #ececec;
   background-color: #ffffff;
-  z-index: 999;
 }
 
 @media screen and (min-width: 768px) {
@@ -1224,11 +1223,17 @@ img {
   transition: all 500ms linear 0ms;
 }
 
+@media screen and (min-width: 1200px) {
+  .backdrop {
+    z-index: 200;
+  }
+}
+
 .backdrop-modal {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 450px;
+  max-width: 450px;
   height: 609px;
   top: 50%;
   left: 50%;
@@ -1238,6 +1243,8 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: all 500ms linear 500ms;
+  /* @media screen and (min-width: 480px) {
+  } */
 }
 
 @media screen and (min-width: 1200px) {

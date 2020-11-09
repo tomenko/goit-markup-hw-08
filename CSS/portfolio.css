@@ -113,7 +113,6 @@ img {
   padding: 16px 0;
   border-bottom: 1px solid #ececec;
   background-color: #ffffff;
-  z-index: 999;
 }
 
 @media screen and (min-width: 768px) {
